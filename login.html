@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link rel="stylesheet" href="./assets/styles.css" />
+		<title>Login Page</title>
+		<style>
+			/* Media query for devices with a maximum width of 768px (mobile devices) */
+			@media screen and (max-width: 768px) {
+				.lmbl_login-container {
+					display: flex;
+				}
+				.ldsk_login-container {
+					display: none;
+				}
+			}
+			/* Media query for devices larger than 768px (desktops and tablets) */
+			@media screen and (min-width: 769px) {
+				.lmbl_login-container {
+					display: none;
+				}
+				.ldsk_login-container {
+					display: flex;
+				}
+			}
+		</style>
+	</head>
+	<body class="ldsk_body">
+		<!-- Mobile version of the login page -->
+		<div class="lmbl_login-container">
+			<div class="lmbl_icon-bar lmbl_top-icon-bar">
+				<!-- top icon bar -->
+				<img
+					src="./assets/images/book.svg"
+					alt="Book icon representing the library"
+				/>
+				<img
+					src="./assets/images/art-category.svg"
+					alt="Art icon representing the arts category"
+				/>
+				<img
+					src="./assets/images/pot.svg"
+					alt="Pot icon representing craft category"
+				/>
+			</div>
+			<div class="lmbl_logo">
+				<!-- logo icon -->
+				<img
+					src="./assets/images/owl-login.svg"
+					alt="Logo of Reading Programs featuring an owl"
+					class="lmbl_logo-image"
+				/>
+			</div>
+			<h1 class="lmbl_app-title">Reading Programs.</h1>
+
+			<div class="lmbl_icon-bar lmbl_bottom-icon-bar">
+				<!-- bottom icon bar -->
+				<img
+					src="./assets/images/hat-full.svg"
+					alt="Graduation hat icon representing education"
+				/>
+				<img
+					src="./assets/images/train.svg"
+					alt="Train icon representing learning journey"
+				/>
+				<img
+					src="./assets/images/pinwheel.svg"
+					alt="Pinwheel icon representing creativity"
+				/>
+				<img
+					src="./assets/images/shovel.svg"
+					alt="Shovel icon representing discovery and digging into knowledge"
+				/>
+			</div>
+			<!-- until we have js wrapped in anchor -->
+			<a href="index.html">
+				<button class="lmbl_btn lmbl_login-btn">Login</button>
+			</a>
+
+			<button class="lmbl_btn lmbl_facebook-btn">
+				Login with Facebook
+			</button>
+
+			<div class="lmbl_horizontal-line-container">
+				<hr class="lmbl_horizontal-line" />
+			</div>
+
+			<div class="lmbl_sign-up">
+				<p>Sign up <a href="#">→</a></p>
+			</div>
+		</div>
+
+		<!-- Desktop version of the login page -->
+		<div class="ldsk_login-container">
+			<div class="ldsk_left-section">
+				<div class="ldsk_logo">
+					<img
+						src="./assets/images/owl-login.svg"
+						alt="Book Reading App Logo featuring an owl symbol"
+					/>
+				</div>
+				<h1>Reading Programs.</h1>
+				<div class="ldsk_illustration">
+					<img
+						src="./assets/images/people-reading.svg"
+						alt="Illustration showing two people reading books"
+					/>
+				</div>
+			</div>
+
+			<div class="ldsk_right-section">
+				<div class="ldsk_login-box">
+					<h2>Login</h2>
+					<form>
+						<div class="ldsk_input-group">
+							<label for="email">Email</label>
+							<input
+								type="email"
+								id="email"
+								placeholder="username111@gmail.com"
+								required
+							/>
+						</div>
+						<div class="ldsk_input-group">
+							<label for="password">Password</label>
+							<input
+								type="password"
+								id="password"
+								placeholder="Enter Password"
+								required
+							/>
+						</div>
+						<div class="ldsk_forgot-password">
+							<a href="#">FORGET PASSWORD?</a>
+						</div>
+						<!-- until we have js wrapped in anchor -->
+						<a href="index.html">
+							<button class="ldsk_login-btn" type="button">
+								Login
+							</button>
+						</a>
+					</form>
+
+					<div class="ldsk_alternative-login">
+						<p>Login with</p>
+						<div class="ldsk_social-login">
+							<a href="#"
+								><img
+									src="./assets/images/social-google.svg"
+									alt="Google login icon"
+							/></a>
+							<a href="#"
+								><img
+									src="./assets/images/social-facebook.svg"
+									alt="Facebook login icon"
+							/></a>
+							<a href="#"
+								><img
+									src="./assets/images/social-twitter.svg"
+									alt="Twitter login icon"
+							/></a>
+						</div>
+					</div>
+
+					<div class="ldsk_signup">
+						<p>New User? <a href="#">Sign Up</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

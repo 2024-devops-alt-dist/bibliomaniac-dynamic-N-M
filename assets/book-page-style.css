@@ -1,0 +1,268 @@
+@media screen and (max-width: 768px) {
+    
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* CHANGE ALL THE 4 CLASSES TO 2 GENERAL ONCE WE WORK WITH JS */
+
+    .ab2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('../assets/images/books/art-book2.jpg');
+        background-size:cover;
+        background-position: center;
+        filter: blur(7px); /* Apply the blur */
+        z-index: -1; /* Make sure it stays behind any other content */
+    }
+
+    .sb1::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('../assets/images/books/story-book1.jpg');
+        background-size:cover;
+        background-position: center;
+        filter: blur(7px); /* Apply the blur */
+        z-index: -1; /* Make sure it stays behind any other content */
+    }
+
+    .banner-ab2 {
+        background-image:url("../assets/images/books/art-book2.jpg");
+        background-size:cover;
+        background-position: 50% 7%;
+        background-repeat: no-repeat;
+        border-radius: 2%;
+        padding:15%;
+        margin-top:15%
+    }
+
+    .banner-sb1 {
+        background-image:url("../assets/images/books/story-book1.jpg");
+        background-size:cover;
+        background-position: 50% 7%;
+        background-repeat: no-repeat;
+        border-radius: 2%;
+        padding:15%;
+        margin-top:15%
+    }
+
+    .book-details {
+        flex: 1;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        color:white;
+    }
+
+    .book-details p {
+        margin: 5px;
+        line-height: 1.6;
+    }
+
+    .exit-container {
+        position: absolute; /* Position the container absolutely */
+        top: 10px; /* Distance from the top */
+        right: 10px; /* Distance from the right */
+    }
+
+    /* Placer la ligne des boutons */
+    .button-container {
+        display: flex; /* Enable flexbox layout */
+        justify-content: center; /* Space out the buttons evenly */
+        width: 100%; /* Full width of the container */
+        margin-top: 10%;
+    }
+
+    .custom-btn {
+        background-color: #FFC001;
+        color: #ffffff;
+        border: none;
+        padding: 10px;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.2s, box-shadow 0.2s;
+    }
+
+    .custom-btn:hover {
+        background-color: #b88a00;
+    }
+
+    .custom-btn:focus {
+        outline: none;
+        box-shadow: 0 0 0 4px #b78a00;
+    }
+
+    .custom-btn:active {
+        background-color: #c39200;
+        box-shadow: 0 0 0 4px #ad8200;
+    }
+
+    .large-btn {
+        flex: 0 0 55%; /* The large button takes 60% of the width */
+        margin-right: 15px; /* Optional: Margin between buttons */
+    }
+
+    .small-btn {
+        flex: 0 0 calc(20% - 10px); /* Each small button takes 20% minus some space for margins */
+        margin-right: 5px; /* Optional: Margin between buttons */
+    }
+
+    .info-text {
+        display: flex; /* Enable flex layout */
+        justify-content: space-between; /* Space between text and icon group */
+        align-items: center; /* Vertically center content */
+    }
+
+    .icon-group {
+        display: flex; /* Flex layout for the icon group */
+    }
+
+    .icon {
+        margin-left: 10px; /* Space between the icons */
+    }
+}
+
+@media screen and (min-width: 769px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* CHANGE ALL THE 4 CLASSES TO 2 GENERAL ONCE WE WORK WITH JS */
+
+    .ab2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('../assets/images/books/art-book2.jpg');
+        background-size:cover;
+        background-position: center;
+        filter: blur(7px); /* Apply the blur */
+        z-index: -1; /* Make sure it stays behind any other content */
+    }
+
+    .banner-ab2 {
+        background-image:url("../assets/images/books/art-book2.jpg");
+        background-size:cover;
+        background-position: 50% 4%;
+        background-repeat: no-repeat;
+        padding:10%;
+    }
+
+    .banner-sb1 {
+        background-image:url("../assets/images/books/story-book1HD.jpg");
+        background-size:cover;
+        background-position: 50% 4%;
+        background-repeat: no-repeat;
+        padding:10%;
+    }
+
+    .book-details {
+        flex: 1;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        color:rgb(0, 0, 0);
+    }
+
+    .book-details p {
+        margin: 5px;
+        line-height: 1.6;
+    }
+
+    .exit-container {
+        position: absolute; /* Position the container absolutely */
+        top: 10px; /* Distance from the top */
+        right: 10px; /* Distance from the right */
+    }
+
+    /* Placer la ligne des boutons */
+    .button-container {
+        display: flex; /* Enable flexbox layout */
+        justify-content: center; /* Space out the buttons evenly */
+        width: 100%; /* Full width of the container */
+        margin-top: 10%;
+    }
+
+    .custom-btn {
+        background-color: #FFC001;
+        color: #ffffff;
+        border: none;
+        padding: 10px;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.2s, box-shadow 0.2s;
+    }
+
+    .custom-btn:hover {
+        background-color: #b88a00;
+    }
+
+    .custom-btn:focus {
+        outline: none;
+        box-shadow: 0 0 0 4px #b78a00;
+    }
+
+    .custom-btn:active {
+        background-color: #c39200;
+        box-shadow: 0 0 0 4px #ad8200;
+    }
+
+    .large-btn {
+        flex: 0 0 55%; /* The large button takes 60% of the width */
+        margin-right: 15px; /* Optional: Margin between buttons */
+    }
+
+    .small-btn {
+        flex: 0 0 calc(20% - 10px); /* Each small button takes 20% minus some space for margins */
+        margin-right: 5px; /* Optional: Margin between buttons */
+    }
+
+    .info-text {
+        display: flex; /* Enable flex layout */
+        justify-content: space-between; /* Space between text and icon group */
+        align-items: center; /* Vertically center content */
+    }
+
+    .icon-group {
+        display: flex; /* Flex layout for the icon group */
+    }
+
+    .icon {
+        margin-left: 10px; /* Space between the icons */
+    }
+}
