@@ -81,13 +81,22 @@ async function afficherDetailsLivre(bookId) {
     console.log(bookId);
     const response = await fetch(`https://www.googleapis.com/books/v1/volumes/${bookId}`);
     const book = await response.json();
+   
     
     // Exemple d'affichage des données dans la page
-    document.getElementById('titrebook').innerText = book.volumeInfo.title;
+    document.getElementById('titrebook').textContent = book.volumeInfo.title;
     document.getElementById('auteur').innerText = book.volumeInfo.authors.join(', ');
-    document.getElementById('description').innerText = book.volumeInfo.description;
-  };
+    document.getElementById('description').textContent = book.volumeInfo.description;
+    document.getElementById('pages').innerText = book.volumeInfo.pageCount + " pages";
+
+    document.querySelectorAll(".sb1").style.backgroundImage=none;
+    document.querySelectorAll(".banner-sb1").style.backgroundImage = 'url("'+ element.volumeInfo.imageLinks.thumbnail +'")';
+    document.getElementById("sb1").style.backgroundImage = `url("${element.volumeInfo.imageLinks.medium}")`;
+    document.getElementById("banner").style.backgroundImage = `url("${element.volumeInfo.imageLinks.medium}")`;
+    console.log(element.volumeInfo.imageLinks.thumbnail);
+};
 
 
+afficherDetailsLivre(bookId);
 
 
