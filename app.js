@@ -4,9 +4,17 @@ const authorNameById = document.getElementById("authorname");
 const isbnById =  document.getElementById("isbn");
 const descriptionById = document.getElementById("description");
 
+const limiteCaractere = (element, maxChars) => {
+    let text = element.innerText;
+    if (text.length > maxChars) {
+        element.innerText = text.substring(0, maxChars) + '...';
+    }
+};
+
+
 
 async function ValidateTitleSearchBook(params) {
-    result.innerHTML = "";
+    result.innerHTML = "<h4>Résultats :</h4>";
     const title = bookNameById.value;
 
     if(title === ""){
@@ -26,10 +34,20 @@ async function ValidateTitleSearchBook(params) {
             data.items.forEach((element) => {
 
                 console.log(element);
-                const author = `<div class="info auteur">auteur:<b>${element.volumeInfo.authors[0]}</b></div>`;
+                const author = `<div class="auteur">${element.volumeInfo.authors[0]}</div>`;
                 const cover = `<div class="cover"><img src="${element.volumeInfo.imageLinks.thumbnail}"/></div>`;
+                const bookname = `<div class="bookname">${element.volumeInfo.title}</div>`;
+                const id = element.id;
+                const texte = element.volumeInfo.description;
+                const limite = 180;
+                const description = texte.length > limite ? texte.substring(0, limite) + '...' : texte;
 
-                result.innerHTML += `${author} ${element.volumeInfo.description} ${cover} </br>`;
+                
+                result.innerHTML += `<div class="item"> ${cover} <div class="item-content">${bookname}  ${author} <p class="description">${description} </p><a href="book.html?id=${id}">voir en détail :</a> </div></div>`;
+               
+        
+                
+                
 
             }
             );
@@ -50,3 +68,26 @@ async function ValidateTitleSearchBook(params) {
     }
     
 }
+
+
+
+
+
+
+const urlParams = new URLSearchParams(window.location.search);
+const bookId = urlParams.get('id');
+
+async function afficherDetailsLivre(bookId) {
+    console.log(bookId);
+    const response = await fetch(`https://www.googleapis.com/books/v1/volumes/${bookId}`);
+    const book = await response.json();
+    
+    // Exemple d'affichage des données dans la page
+    document.getElementById('titrebook').innerText = book.volumeInfo.title;
+    document.getElementById('auteur').innerText = book.volumeInfo.authors.join(', ');
+    document.getElementById('description').innerText = book.volumeInfo.description;
+  };
+
+
+
+
