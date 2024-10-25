@@ -75,6 +75,7 @@ async function afficherDetailsLivre(bookId) {
     document.getElementById('auteur').innerText = book.volumeInfo.authors.join(', ');
     document.getElementById('description').innerHTML = book.volumeInfo.description;
     document.getElementById('pages').innerText = book.volumeInfo.pageCount + " pages";
+    document.getElementById('date').innerText = "Date de parution : " + book.volumeInfo.publishedDate;
 
     document.querySelector(".sb1").style.backgroundImage= 'url("'+ cover +'")';;
     document.querySelector(".banner-sb1").style.backgroundImage = 'url("'+ cover +'")';
