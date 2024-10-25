@@ -29,6 +29,7 @@ async function ValidateTitleSearchBook(params) {
 
             const data = await response.json();
             const book = data.items[0].volumeInfo;
+    
             //console.table(data);
             
             data.items.forEach((element) => {
@@ -43,30 +44,14 @@ async function ValidateTitleSearchBook(params) {
                 const description = texte.length > limite ? texte.substring(0, limite) + '...' : texte;
 
                 
-                result.innerHTML += `<div class="item"> ${cover} <div class="item-content">${bookname}  ${author} <p class="description">${description} </p><a href="book.html?id=${id}">voir en détail :</a> </div></div>`;
-               
-        
-                
-                
-
+                result.innerHTML += `<div class="item"> ${cover} <div class="item-content">${bookname}  ${author} <p class="description">${description} </p><a class="link" href="book.html?id=${id}">voir en détail</a> </div></div>`;
             }
             );
-            
-
-
-      
-
-
-            //bookImgById.src = book.imageLinks ? book.imageLinks.thumbnail
-           
-
         }
         catch(error){
-            alert(error.message);
+            console.log(error.message);
         }
-        
     }
-    
 }
 
 
@@ -81,12 +66,29 @@ async function afficherDetailsLivre(bookId) {
     console.log(bookId);
     const response = await fetch(`https://www.googleapis.com/books/v1/volumes/${bookId}`);
     const book = await response.json();
+    const cover = book.volumeInfo.imageLinks.extraLarge;
+    
+    console.log(cover);
     
     // Exemple d'affichage des données dans la page
-    document.getElementById('titrebook').innerText = book.volumeInfo.title;
+    document.getElementById('titrebook').textContent = book.volumeInfo.title;
     document.getElementById('auteur').innerText = book.volumeInfo.authors.join(', ');
-    document.getElementById('description').innerText = book.volumeInfo.description;
-  };
+    document.getElementById('description').innerHTML = book.volumeInfo.description;
+    document.getElementById('pages').innerText = book.volumeInfo.pageCount + " pages";
+    document.getElementById('date').innerText = "Date de parution : " + book.volumeInfo.publishedDate;
+
+    document.querySelector(".sb1").style.backgroundImage= 'url("'+ cover +'")';;
+    document.querySelector(".banner-sb1").style.backgroundImage = 'url("'+ cover +'")';
+    document.querySelector(".sb1").style.backgroundRepeat = no-Repeat;
+    document.querySelector(".banner-sb1").style.backgroundRepeat = no-Repeat;
+   
+    
+};
+
+
+afficherDetailsLivre(bookId);
+
+
 
 
 
