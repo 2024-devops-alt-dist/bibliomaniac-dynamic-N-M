@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/styles2.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <ul class="nav-ul">
+                <li><a href="index.html"><img src="assets/images/owl.svg" alt="Logo de l'accueil" class="nav-icon"></a>
+                </li>
+                <li><a href="category.html"><img src="assets/images/category.svg" alt="Logo des catégories"
+                            class="nav-icon"></a></li>
+                <li><a href="collection.html"><img src="assets/images/collection.svg" alt="Logo de la messagerie"
+                            class="nav-icon"></a></li>
+                <li><a href="login.html"><img src="assets/images/user.svg" alt="Logo d'utilisateur"
+                            class="nav-icon"></a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <header class="desktop-header">
+        <nav class="desktop-navbar">
+            <div class="title-group">
+                <a href="index.html"><img src="assets/images/logo-navbar.svg" alt="Logo de Bibliomaniac"
+                        class="logo-header"></a>
+                <a href="index.html" class="header-title nav-link">Bibliomaniac</a>
+            </div>
+            <ul class="desktop-nav-ul">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="category.html" class="nav-link">Catégories</a></li>
+                <li><a href="collection.html" class="nav-link">Collection</a></li>
+                <li><a href="login.html" class="nav-link">Connexion</a></li>
+                <li><a href="search.html" class="nav-link">Recherche</a></li>
+                <li><a href="search2.html" class="nav-link">Recherche (templates) </a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <section class="title-section start">
+            <div class="bg-container">
+                <div class="bg-title"></div>
+            </div>
+            <div class="text-title">
+                <h1 class="h1-homepage">Rercherche</h1>
+            </div>
+        </section>
+
+        <div class="form">
+
+            <div class="">
+                <h2>Nom du livre</h2>
+
+                <input type="text" id="bookname" name="bookname" required>
+                <button class="search" onclick="ValidateTitleSearchBook()"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+
+
+            </div>
+
+        </div>
+
+        <div id="result">
+            <!-- partie dynamique générée en JS-->
+
+
+        </div>
+
+
+    </main>
+
+
+
+
+    <script src="app.js"></script>
+
+
+    <script>
+        const limiteCaractere = (element, maxChars) => {
+            let text = element.innerText;
+            if (text.length > maxChars) {
+                element.innerText = text.substring(0, maxChars) + '...';
+            }
+        };
+
+        const element = document.getElementsByClassName('description');
+        limiteCaractere(element, 10);
+
+
+    </script>
+
+    <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
+
+    <script src="https://kit.fontawesome.com/9c65ffb95f.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

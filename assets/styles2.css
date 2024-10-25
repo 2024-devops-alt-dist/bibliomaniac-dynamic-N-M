@@ -83,3 +83,55 @@ h4 {
 
 }
 
+.book-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+}
+
+.book-title {
+    font-size: 16x;
+    font-weight: 600;
+    text-align: center;
+    line-height: 17px;
+}
+
+.link-card {
+    text-align: center;
+    font-weight: 800;
+    text-decoration: none;
+    color: white;
+    display: block;
+    background-color:#653FC0 ;
+    border-radius: 74px;
+    width: 70px;
+    justify-content: center;
+   
+    position: absolute;
+    bottom: 20px;
+   
+}
+
+.card-text {
+    position: relative;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+    padding-bottom: 80px;
+}
+
+.link {
+    text-decoration: none;
+    background-color: #653FC0;
+    color: white;
+    font-weight: 700;
+    border-radius: 4px;
+    display: block;
+    width: 130px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: -10px;
+
+}

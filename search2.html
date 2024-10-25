@@ -42,7 +42,8 @@
                 <li><a href="category.html" class="nav-link">Catégories</a></li>
                 <li><a href="collection.html" class="nav-link">Collection</a></li>
                 <li><a href="login.html" class="nav-link">Connexion</a></li>
-                <li><a href="test.html" class="nav-link">Recherche</a></li>
+                <li><a href="search.html" class="nav-link">Recherche</a></li>
+                <li><a href="search2.html" class="nav-link">Recherche (templates) </a></li>
 
             </ul>
         </nav>
@@ -73,8 +74,22 @@
         </div>
 
         <div id="result">
-            <!-- partie dynamique générée en JS-->
+            <section class="popular-section">
+                <div id="data-container" class="carrousel-popular-section "></div>
 
+                    <template id="book-template">
+                    <div class="book-card">
+                        <img class="book-image" src="" alt="Couverture du livre" />
+                        <div class="card-text">
+                            <p class="card-title book-title"></p>
+                            <p class="card-title book-author"></p>
+                            <a href="" class="link-card">Voir</a>
+                        </div>
+                    </div>
+                </template>
+                    
+               
+            </section>
 
         </div>
 
@@ -84,19 +99,11 @@
 
 
 
-    <script src="app.js"></script>
+    <script src="app2.js"></script>
 
 
     <script>
-        const limiteCaractere = (element, maxChars) => {
-            let text = element.innerText;
-            if (text.length > maxChars) {
-                element.innerText = text.substring(0, maxChars) + '...';
-            }
-        };
-
-        const element = document.getElementsByClassName('description');
-        limiteCaractere(element, 10);
+       
 
 
     </script>
