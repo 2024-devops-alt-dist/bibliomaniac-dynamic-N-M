@@ -1,12 +1,15 @@
 
 
 .form {
-    width: 960px;
+    width: 100%;
+    max-width: 960px;
     display: flex;
     margin: 0 auto;
     text-align: center;
     justify-content: center;
     margin-bottom: 40px;
+    margin-top: 40px;
+    overflow-y: hidden;
 }
 
 
@@ -37,14 +40,17 @@ border: none;
 
 
 #result {
-    width: 960px;
+    width: 90%;
+    max-width: 960px;
     display: block;
     margin: 0 auto;
+    overflow-y: hidden;
 
 }
 
 .item {
-    width: 960px;
+    width: 100%;
+    max-width: 960px;
     display:flex;
     margin: 0 auto;
     background-color: #F4F4F4;
